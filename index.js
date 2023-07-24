@@ -18,7 +18,7 @@ app.get("/", (req, res) => {
 //product router
 app.use("/", productRouter);
 
-app.listen(process.env.port, async () => {
+app.listen(process.env.port || 8080, async () => {
   try {
     await connection;
 
